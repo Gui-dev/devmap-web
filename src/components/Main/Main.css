@@ -1,0 +1,68 @@
+.main-container {
+  margin-left: 30px;
+  flex: 1;
+}
+
+.dev-container {
+  display: grid;
+  grid-template-columns: repeat( 2, 1fr );
+  gap: 20px;
+  list-style: none;
+}
+
+.dev-item {
+  background-color: #FFF;
+  box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.02);
+  border-radius: 2px;
+  padding: 20px;
+}
+
+.dev-item_header {
+  display:  flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.dev-item_img {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+}
+
+.dev-item_info {
+  margin-left: 10px;
+}
+
+.dev-item_name {
+  display: block;
+  font-size: 16px;
+  color: #333;
+}
+
+.dev-item_techs {
+  font-size: 13px;
+  color: #999;
+  margin-top: 2px;
+}
+
+.dev-item_bio {
+  font-size: 14px;
+  line-height: 20px;
+  color: #666;
+  margin: 10px 0;
+}
+
+.dev-item_link {
+  font-size: 14px;
+  text-decoration: none;
+  color: #8E4DFF;
+  transition: color 0.5s;
+}
+
+.dev-item_link:hover {
+  color: #5A2Ea6;
+}
+
+
+
+

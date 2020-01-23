@@ -1,11 +1,20 @@
 import React from 'react'
 
+import './css/global.css'
+import './App.css'
+
+import Sidebar from './components/Sidebar'
+import Main from './components/Main'
+
 function App() {
   return (
-    <div className="App">
-      <h1>Hello World</h1>
+    <div id="app">
+
+      <Sidebar />
+      <Main />
+
     </div>
-  );
+  )
 }
 
 export default App
