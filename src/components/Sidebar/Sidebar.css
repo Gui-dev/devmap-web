@@ -64,3 +64,10 @@
   background-color: #6931CA;
 }
 
+@media ( max-width: 1000px ) {
+
+  .form-register {
+    width: 100%;
+  }
+}
+

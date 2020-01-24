@@ -7,3 +7,10 @@
   flex-direction: row;
   align-items: flex-start;
 }
+
+@media ( max-width: 1000px ) {
+
+  #app {
+    flex-direction: column;
+  }
+}
