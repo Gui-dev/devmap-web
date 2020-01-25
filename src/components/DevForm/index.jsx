@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 
-import './Sidebar.css'
+import './DevForm.css'
 
-function Sidebar() {
+function DevForm( { onSubmit } ) {
 
   const [ github_username, setGituhubUsername ] = useState( '' )
   const [ techs, setTechs ] = useState( '' )
@@ -22,18 +22,27 @@ function Sidebar() {
         timeout: 30000
       } 
     )
-  }, [] ) 
+  }, [] )
 
-  const handleAddDev = ( e ) => {
+  const handleSubmit = async ( e ) => {
     e.preventDefault()
-    
+    await onSubmit( {
+      github_username,
+      techs,
+      latitude,
+      longitude
+    } )
+
+    setGituhubUsername( '' )
+    setTechs( '' )
   }
 
   return (
-    <aside className="form-register">
+
+    <>
       <h1 className="form-register_title">Cadastrar</h1>
 
-      <form className="form-register_form" onSubmit={ handleAddDev }>
+      <form className="form-register_form" onSubmit={ handleSubmit }>
         <div className="input-block">
           <label htmlFor="github_username" className="form-register_label">Usuário do Github</label>
           <input type="text" name="github_username" id="github_username" 
@@ -81,8 +90,8 @@ function Sidebar() {
         <button type="submit" className="form-register_button">Salvar</button>
 
       </form>
-    </aside>
+    </>
   )
 }
 
-export default Sidebar
+export default DevForm
